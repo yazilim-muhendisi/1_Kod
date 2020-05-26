@@ -1,4 +1,4 @@
-# 1_Kod
+
 ----------------------------------------------------- ADMİN-ÜYE İŞLEMLERİ----------------------------------------------------------
 Projede Kullanılan Teknolojiler:
 -ASP.NET CORE- MVC  
@@ -109,5 +109,5 @@ ETKİNLİKLER: Bu alana ise kullanıcının Etkinlikler alanına tıklamasıyla 
 
 HAKKIMIZDA: Hakkımızda alanına_layout alanımızdaki about kod parçacıkları hakkimizda viewimize eklenir. Kullanıcının site hakkında bilgi alabileceği detaylı yazı ve yazı hakkında resim bu alanda görüntülenecektir. 
 
-İLETİŞİM: İletisim viewinde ise kullanıcıların yöneticileri görebilecekleri alanın entegresi yapılır. _Layout arasından contant başlıklı kod parçası bu alana eklenir.
+İLETİŞİM: İletisim viewinde ise kullanıcıların yöneticileri görebilecekleri alanın entegresi yapılır. _Layout arasından content başlıklı kod parçası bu alana eklenir.
 
