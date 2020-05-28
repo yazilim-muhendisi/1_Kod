@@ -1,0 +1,173 @@
+﻿
+@{
+    ViewData["Title"] = "Etkinlikler";
+}
+<!-- Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content rounded-0 border-0 p-4">
+                <div class="modal-header border-0">
+                    <h3>KAYIT OL</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="login">
+                        <form action="#" class="row">
+                            <div class="col-12">
+                                <input type="text" class="form-control mb-3" id="signupName" name="signupName" placeholder="Adınız Soyadınız">
+                            </div>
+                            <div class="col-12">
+                                <input type="email" class="form-control mb-3" id="signupEmail" name="signupEmail" placeholder="Email adresi giriniz.">
+                            </div>
+                            <div class="col-12">
+                                <input type="email" class="form-control mb-3" id="signupSchool" name="signupSchool" placeholder="Okul Seçin">
+                            </div>
+                            <div class="col-12">
+                                <input type="password" class="form-control mb-3" id="signupPassword" name="signupPassword" placeholder="Şifre Girin">
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">KAYIT OL</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content rounded-0 border-0 p-4">
+            <div class="modal-header border-0">
+                <h3>Oturum Aç</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="row">
+                    <div class="col-12">
+                        <input type="text" class="form-control mb-3" id="loginName" name="loginName" placeholder="Kullanıcı Adınızı Giriniz">
+                    </div>
+                    <div class="col-12">
+                        <input type="password" class="form-control mb-3" id="loginPassword" name="loginPassword" placeholder="Şifrenizi Giriniz">
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Giriş Yap</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- page title -->
+<section class="page-title-section overlay" data-background="~/Content/images/backgrounds/page-title.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="col-md-8">
+                    <div align="center"><p><font face="times new roman" size="20" color="white"><b>ETKİNLİKLER</b></font> </p> </div>
+                    <ul class="list-inline custom-breadcrumb">
+                        <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="@@page-link">_______________ÜNİVERSİTESİ</a></li>
+                        <li class="list-inline-item text-white h3 font-secondary @@nasted"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /page title -->
+<!-- courses -->
+ <section class="section">
+            <div class="container">
+                <div class="row">
+                    <!-- event -->
+                    <div class="col-lg-4 col-sm-6 mb-5">
+                        <div class="card border-0 rounded-0 hover-shadow">
+                            <div class="card-img position-relative">
+                                <img class="card-img-top rounded-0" src="~/Content/images/events/10. yil etkinlikleri afis calismasi_372x318.jpg" alt="event thumb">
+                                <div class="card-date"><span>7</span><br>Mayıs</div>
+                            </div>
+                            <div class="card-body">
+                                <!-- location -->
+                                <p><i class="ti-location-pin text-primary mr-2"></i>ETKİNLİKLER</p>
+                                <a href="~/Content/etkinlik1.html">
+                                    <h4 class="card-title">10.Yıl Etkinlikleri 17 Mart - 7 Mayıs</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- event -->
+                    <div class="col-lg-4 col-sm-6 mb-5">
+                        <div class="card border-0 rounded-0 hover-shadow">
+                            <div class="card-img position-relative">
+                                <img class="card-img-top rounded-0" src="~/Content/images/events/event-1 - Kopyala_372x318.jpg" alt="event thumb">
+                                <div class="card-date"><span>18</span><br>Mayıs</div>
+                            </div>
+                            <div class="card-body">
+                                <!-- location -->
+                                <p><i class="ti-location-pin text-primary mr-2"></i>Eskişehir Osmangazi Üniversitesi</p>
+                                <a href="~/Content/etkinlik2.html">
+                                    <h4 class="card-title">“Mezun Olduk, Ne Oldu?” Diyenlerin Etkinliği 18 Mayıs’ta Eskişehir’de</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- event -->
+                    <div class="col-lg-4 col-sm-6 mb-5">
+                        <div class="card border-0 rounded-0 hover-shadow">
+                            <div class="card-img position-relative">
+                                <img class="card-img-top rounded-0" src="~/Content/images/events/2020-iha_afis-web_372x318.jpg" alt="event thumb">
+                                <div class="card-date"><span>15</span><br>Eylül</div>
+                            </div>
+                            <div class="card-body">
+                                <!-- location -->
+                                <p><i class="ti-location-pin text-primary mr-2"></i>Gaziantep</p>
+                                <a href="~/Content/etkinlik3.html">
+                                    <h4 class="card-title">5.Tübitak Uluslararası İnsansız Hava Araçları Yarışması </h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- event -->
+                    <div class="col-lg-4 col-sm-6 mb-5">
+                        <div class="card border-0 rounded-0 hover-shadow">
+                            <div class="card-img position-relative">
+                                <img class="card-img-top rounded-0" src="~/Content/images/events/resimieee_372x318.jpg" alt="event thumb">
+                                <div class="card-date"><span>3</span><br>Ekim</div>
+                            </div>
+                            <div class="card-body">
+                                <!-- location -->
+                                <p><i class="ti-location-pin text-primary mr-2"></i>THKÜ, Ankara</p>
+                                <a href="~/Content/etkinlik4.html">
+                                    <h4 class="card-title">IEEE Yeni Dönem Tanışma Toplantısı</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- event -->
+                    <div class="col-lg-4 col-sm-6 mb-5">
+                        <div class="card border-0 rounded-0 hover-shadow">
+                            <div class="card-img position-relative">
+                                <img class="card-img-top rounded-0" src="~/Content/images/events/PROFESYONEL GELisiM SEMiNERLERi_2_372x318.jpg" alt="event thumb">
+                                <div class="card-date"><span>21</span><br>Ekim</div>
+                            </div>
+                            <div class="card-body">
+                                <!-- location -->
+                                <p><i class="ti-location-pin text-primary mr-2"></i>Yozgat Bozok Üniversitesi</p>
+                                <a href="~/Content/etkinlik5.html">
+                                    <h4 class="card-title">Profesyonel Gelişim Seminerleri-2</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- event -->
+                    
+                </div>
+            </div>
+        </section>
+        <!-- /courses -->
