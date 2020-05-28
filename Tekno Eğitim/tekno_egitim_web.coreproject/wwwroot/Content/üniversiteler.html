@@ -1,0 +1,348 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>Educenter</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+  <!-- animation css -->
+  <link rel="stylesheet" href="plugins/animate/animate.css">
+  <!-- aos -->
+  <link rel="stylesheet" href="plugins/aos/aos.css">
+  <!-- venobox popup -->
+  <link rel="stylesheet" href="plugins/venobox/venobox.css">
+
+  <!-- Main Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+
+    <!-- header -->
+    <header class="fixed-top header">
+        <!-- top header -->
+        <div class="top-header py-2 bg-white">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-lg-4 text-center text-lg-left">
+                        <ul class="list-inline d-inline">
+                            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-facebook"></i></a></li>
+                            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
+                            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-linkedin"></i></a></li>
+                            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-8 text-center text-lg-right">
+                        <ul class="list-inline">
+
+                            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#" data-toggle="modal" data-target="#loginModal">OTURUM AÇ</a></li>
+                            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#" data-toggle="modal" data-target="#signupModal">KAYIT OL</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- navbar -->
+        <div class="navigation w-100">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light p-0">
+                    <a class="navbar-brand" href="~/Content/index.html"><img src="~/Content/images/logo1.png" alt="logo"></a>
+                    <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
+                            aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navigation">
+                        <ul class="navbar-nav ml-auto text-center">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/Home/Index">Anasayfa</a>
+                            </li>
+                            <li class="nav-item @@blog">
+                                <a class="nav-link" href="/Home/Blog">Üniversiteler</a>
+                            </li>
+                            <li class="nav-item @@events">
+                                <a class="nav-link" href="/Home/Etkinlik">Etkinlikler</a>
+                            </li>
+                            <li class="nav-item dropdown view">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                   aria-haspopup="true" aria-expanded="false">
+                                    Enler
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/Home/Blog">En Çok İzlenen Videolar</a>
+                                    <a class="dropdown-item" href="/Home/Blog">En Çok Okunan Makaleler</a>
+                                    <a class="dropdown-item" href="/Home/Blog">En Çok Okunan Haberler</a>
+                                    <a class="dropdown-item" href="/Home/Blog">En Çok Görüntülenen Blog Yazıları</a>
+                                    <a class="dropdown-item" href="/Home/Blog">En Çok Görüntülenen Notlar</a>
+                                </div>
+                            </li>
+                            <li class="nav-item @@about">
+                                <a class="nav-link" href="/Home/Hakkimizda">Hakkımızda</a>
+                            </li>
+                            <li class="nav-item @@contact">
+                                <a class="nav-link" href="/Home/Iletisim">İletişim</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- /header -->
+    <!-- Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content rounded-0 border-0 p-4">
+                <div class="modal-header border-0">
+                    <h3>KAYIT OL</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="login">
+                        <form action="#" class="row">
+                            <div class="col-12">
+                                <input type="text" class="form-control mb-3" id="signupName" name="signupName" placeholder="Adınız Soyadınız">
+                            </div>
+                            <div class="col-12">
+                                <input type="email" class="form-control mb-3" id="signupEmail" name="signupEmail" placeholder="Email adresi giriniz.">
+                            </div>
+                            <div class="col-12">
+                                <input type="email" class="form-control mb-3" id="signupSchool" name="signupSchool" placeholder="Okul Seçin">
+                            </div>
+                            <div class="col-12">
+                                <input type="password" class="form-control mb-3" id="signupPassword" name="signupPassword" placeholder="Şifre Girin">
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">KAYIT OL</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content rounded-0 border-0 p-4">
+                <div class="modal-header border-0">
+                    <h3>Oturum Aç</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" class="row">
+                        <div class="col-12">
+                            <input type="text" class="form-control mb-3" id="loginName" name="loginName" placeholder="Kullanıcı Adınızı Giriniz">
+                        </div>
+                        <div class="col-12">
+                            <input type="password" class="form-control mb-3" id="loginPassword" name="loginPassword" placeholder="Şifrenizi Giriniz">
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Giriş Yap</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- page title -->
+    <section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <ul class="list-inline custom-breadcrumb">
+                        <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="blog.html">Üniversiteler</a></li>
+                        <li class="list-inline-item text-white h3 font-secondary nasted">__________ Üniversitesi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /page title -->
+    <!-- blog details -->
+    <section class="section-sm bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <img src="images/blog/blogpost3.3.jpg" alt="blog-thumb" class="img-fluid w-100">
+                </div>
+                <div class="col-12">
+                    <ul class="list-inline">
+                        <li class="list-inline-item mr-4 mb-3 mb-md-0 text-light"><span class="font-weight-bold mr-2">Post:</span>Sinem Akyol</li>
+                        <li class="list-inline-item mr-4 mb-3 mb-md-0 text-light">27 Nisan 2020</li>
+                        <li class="list-inline-item mr-4 mb-3 mb-md-0 text-light"><i class="ti-book mr-2"></i>Okunma 289</li>
+                        <li class="list-inline-item mr-4 mb-3 mb-md-0 text-light"><i class="ti-share mr-2"></i>289</li>
+                        <li class="list-inline-item mr-4 mb-3 mb-md-0 text-light"><a class="text-light" href="#"><i class="ti-comments mr-2"></i>265</a></li>
+                    </ul>
+                </div>
+                <!-- border -->
+                <div class="col-12 mt-4">
+                    <div class="border-bottom border-primary"></div>
+                </div>
+                <!-- blog contect -->
+                <div class="col-12 mb-5">
+                    <h2>ÜNİVERSİTEMİZ PERSONELİNE HOBİ BAHÇELERİ VERİLDİ </h2>
+                    <p>
+                        Üniversitemizin Divanlı/Topçu mevkiinde bulunan ve Ziraat Fakültemizin de tarımsal denemeler amacıyla kullandığı alanda “Hobi Bahçeleri” oluşturuldu.
+
+                        Her biri 50 ve 100 m2 olarak düzenlenen hobi bahçeleri 100’ün üzerinde personelimize kura çekimi yapılarak, Rektörümüz Prof. Dr. Ahmet Karadağ tarafından teslim edildi.
+
+                        Teslim esnasında bazı açıklamalarda bulunan Rektörümüz Prof. Dr. Ahmet Karadağ, böyle bir dönemde üretim yapmanın, üretime katkıda bulunmanın son derece kıymetli olduğunu, personelimizin akademik ve idari ayırımı yapmaksızın bu mekânları değerlendirme ve enerjilerini ürüne dönüştürme arzularından büyük memnuniyet duyduğunu ifade etti.
+                    </p>
+                    <p>
+                        Bu faaliyete katılanlar arasında yardımlaşma, paylaşma ve dayanışma gibi değerlerimizin sergileneceğini, Yozgat Bozok Üniversitesi ailesine aidiyetin artacağını ve içinden geçtiğimiz zorlu süreç sonrasında stres atmanın yanı sıra iyi bir meşguliyet olacağını belirten Rektörümüz Prof. Dr. Karadağ, ülke olarak üretim seferberliğine ihtiyacımız olduğunu, her alanın değerlendirilmesi ve ekonomiye dönüştürülmesinin önemini de sözlerine ekledi.
+                    </p>
+                    <p>
+                        Hobi bahçeleri alanında yapılan teslim etkinliğine Rektörümüz Prof. Dr. Ahmet Karadağ’ın yanı sıra Rektör Yardımcılarımız Prof. Dr. Şenol Akın, Prof. Dr. Güngör Yılmaz, Genel Sekreterimiz Prof. Dr. Uğur Kölemen ve Genel Sekreter Yardımcımız İzzet Ünlü’nün yanı sıra Üniversitemiz personeli katıldı.
+
+                        Rektörümüz Prof. Dr. Ahmet Karadağ, bu faaliyet alanının oluşturulmasında emekleri olan başta Rektör Yardımcımız Prof. Dr. Güngör Yılmaz olmak üzere herkese teşekkürlerini ifade ederek, sözlerini başarı, kolaylık ve bereket dilekleriyle tamamladı.
+                    </p>
+                </div>
+                <!-- comment box -->
+                <div class="col-12">
+                    <form action="#" class="row">
+                        <div class="col-sm-6">
+                            <input type="text" class="form-control mb-4" id="name" name="name" placeholder="Kullanıcı Adı">
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="email" class="form-control mb-4" id="mail" name="mail" placeholder="E-posta Adresi">
+                        </div>
+                        <div class="col-12">
+                            <textarea name="comment" id="comment" class="form-control mb-4" placeholder="Yorum Gönder..."></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" value="send" class="btn btn-primary">Yorum Gönder</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /blog details -->
+    <!-- recommended post -->
+    
+    <!-- /recommended post -->
+    <!-- footer -->
+    <footer>
+        <!-- newsletter -->
+        <div class="newsletter">
+            <div class="container">
+                <div class="row">
+                    
+                </div>
+            </div>
+        </div>
+        <!-- footer content -->
+        <!-- footer content -->
+        <div class="footer bg-footer section border-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
+                        <!-- logo -->
+                        <a class="logo-footer" href="~/Content/index.html"><img class="img-fluid mb-4" src="~/Content/images/logo1.png" alt="logo"></a>
+
+                    </div>
+                    <!-- company -->
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+                        <h4 class="text-white mb-5">EĞİTİM AĞI</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><a class="text-color" href="~/Content/about.html">Hakkımızda</a></li>
+                            <li class="mb-3"><a class="text-color" href="~/Content/teacher.html">Eğitimciler</a></li>
+                            <li class="mb-3"><a class="text-color" href="~/Content/contact.html">İletişim</a></li>
+                            <li class="mb-3"><a class="text-color" href="~/Content/blog.html">Üniversiteler</a></li>
+                        </ul>
+                    </div>
+                    <!-- links -->
+                    <!-- support -->
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+                        <h4 class="text-white mb-5">DESTEK</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><a class="text-color" href="~/Content/#">Forum</a></li>
+                            <li class="mb-3"><a class="text-color" href="~/Content/#">Dökümanlar</a></li>
+                            <li class="mb-3"><a class="text-color" href="~/Content/#">Makaleler</a></li>
+
+                        </ul>
+                    </div>
+                    <!-- support -->
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+                        <h4 class="text-white mb-5">ÖNERİLER</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><a class="text-color" href="~/Content/#">WordPress</a></li>
+                            <li class="mb-3"><a class="text-color" href="~/Content/#">LearnPress</a></li>
+                            <li class="mb-3"><a class="text-color" href="~/Content/#">WooCommerce</a></li>
+                            <li class="mb-3"><a class="text-color" href="~/Content/#">bbPress</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- copyright -->
+        <div class="copyright py-4 bg-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-7 text-sm-left text-center">
+                        <p class="mb-0">
+                            Copyright
+                            <script>
+                                var CurrentYear = new Date().getFullYear()
+                                document.write(CurrentYear)
+                            </script>
+                            © Theme By <a href="https://themefisher.com">themefisher.com</a>
+                        </p> . All Rights Reserved.
+                    </div>
+                    <div class="col-sm-5 text-sm-right text-center">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://www.facebook.com/themefisher"><i class="ti-facebook text-primary"></i></a></li>
+                            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://www.twitter.com/themefisher"><i class="ti-twitter-alt text-primary"></i></a></li>
+                            <li class="list-inline-item"><a class="d-inline-block p-2" href="#"><i class="ti-instagram text-primary"></i></a></li>
+                            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://dribbble.com/themefisher"><i class="ti-dribbble text-primary"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
+    <!-- jQuery -->
+    <script src="plugins/jQuery/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- slick slider -->
+    <script src="plugins/slick/slick.min.js"></script>
+    <!-- aos -->
+    <script src="plugins/aos/aos.js"></script>
+    <!-- venobox popup -->
+    <script src="plugins/venobox/venobox.min.js"></script>
+    <!-- mixitup filter -->
+    <script src="plugins/mixitup/mixitup.min.js"></script>
+    <!-- google map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+    <script src="plugins/google-map/gmap.js"></script>
+
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
