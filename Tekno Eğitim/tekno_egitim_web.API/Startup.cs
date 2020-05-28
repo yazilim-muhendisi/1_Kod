@@ -25,6 +25,7 @@ using tekno_egitim_web.core.Models;
 using tekno_egitim_web.core.Repository;
 using tekno_egitim_web.core.Services;
 using tekno_egitim_web.core.UnitOfWorks;
+using tekno_egitim_web.coreproject.KategoriAPI;
 using tekno_egitim_web.data;
 using tekno_egitim_web.data.Repository;
 using tekno_egitim_web.data.UnitOfWork;
@@ -40,12 +41,14 @@ namespace tekno_egitim_web.API
         }
 
         public IConfiguration Configuration { get; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHttpClient<KategoriAPIServices>(options =>
+            {
+                options.BaseAddress = new Uri(Configuration["localhost"]);
+            });
             services.AddScoped<NotFoundFilter>();
-            services.AddAutoMapper(typeof (Startup));
+            services.AddAutoMapper(typeof(Startup));
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
             services.AddScoped(typeof(IService<>), typeof(services.Services.Service<>));
             services.AddScoped<IKategoriServices, KategoriService>();
@@ -64,15 +67,14 @@ namespace tekno_egitim_web.API
                     o.MigrationsAssembly("tekno_egitim_web.data");
                 });
             });
-
-            services.AddControllers(o => {
+            services.AddControllers(o =>
+            {
                 o.Filters.Add(new ValidationFilter());
             });
             services.Configure<ApiBehaviorOptions>(options => {
                 options.SuppressModelStateInvalidFilter = true;
             });
         }
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

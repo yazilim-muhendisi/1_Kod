@@ -59,6 +59,7 @@ namespace tekno_egitim_web.API.Mapping
 
             CreateMap<Video, VideoWithKategoriDto>();
             CreateMap<VideoWithKategoriDto, Video>();
+
         }
     }
 }

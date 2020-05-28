@@ -27,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\tekno_egitim_web.coreproject\tekno_egitim_web.coreproject.csproj" />
     <ProjectReference Include="..\tekno_egitim_web.core\tekno_egitim_web.core.csproj" />
     <ProjectReference Include="..\tekno_egitim_web.data\tekno_egitim_web.data.csproj" />
     <ProjectReference Include="..\tekno_egitim_web.services\tekno_egitim_web.services.csproj" />

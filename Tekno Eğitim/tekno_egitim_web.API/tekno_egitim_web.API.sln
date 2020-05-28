@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tekno_egitim_web.API", "tekno_egitim_web.API.csproj", "{07A96084-A042-4EED-AE52-ADE1F171299E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tekno_egitim_web.API", "tekno_egitim_web.API.csproj", "{07A96084-A042-4EED-AE52-ADE1F171299E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tekno_egitim_web.core", "..\tekno_egitim_web.core\tekno_egitim_web.core.csproj", "{F57D7CD3-A689-48C5-9FD7-49BBC62266B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tekno_egitim_web.core", "..\tekno_egitim_web.core\tekno_egitim_web.core.csproj", "{F57D7CD3-A689-48C5-9FD7-49BBC62266B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tekno_egitim_web.data", "..\tekno_egitim_web.data\tekno_egitim_web.data.csproj", "{9CDFDBFA-482A-4AE0-8DB3-DE6DD0DA5124}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tekno_egitim_web.data", "..\tekno_egitim_web.data\tekno_egitim_web.data.csproj", "{9CDFDBFA-482A-4AE0-8DB3-DE6DD0DA5124}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tekno_egitim_web.services", "..\tekno_egitim_web.services\tekno_egitim_web.services.csproj", "{538A1F61-681F-4BEA-BF2E-CE6458B74DAF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tekno_egitim_web.services", "..\tekno_egitim_web.services\tekno_egitim_web.services.csproj", "{538A1F61-681F-4BEA-BF2E-CE6458B74DAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tekno_egitim_web.coreproject", "..\tekno_egitim_web.coreproject\tekno_egitim_web.coreproject.csproj", "{1442443D-AB57-4BFF-806D-A4524B9632B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{538A1F61-681F-4BEA-BF2E-CE6458B74DAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{538A1F61-681F-4BEA-BF2E-CE6458B74DAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{538A1F61-681F-4BEA-BF2E-CE6458B74DAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1442443D-AB57-4BFF-806D-A4524B9632B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1442443D-AB57-4BFF-806D-A4524B9632B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1442443D-AB57-4BFF-806D-A4524B9632B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1442443D-AB57-4BFF-806D-A4524B9632B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
