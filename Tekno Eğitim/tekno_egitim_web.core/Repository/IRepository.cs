@@ -9,7 +9,6 @@ namespace tekno_egitim_web.core.Repository
     public interface IRepository<TEntity> where TEntity:class
     {
         Task<TEntity> GetByIdAsync(int id);
-        Task<IEnumerable<TEntity>> GetAllAsync();
         Task<IEnumerable<TEntity>> Where(Expression<Func<TEntity, bool>> dogrulama);
 
         Task<TEntity> SingleOrDefaultAsync(Expression<Func<TEntity, bool>> dogrulama);
@@ -19,5 +18,6 @@ namespace tekno_egitim_web.core.Repository
         void RemoveRange(IEnumerable<TEntity> entities);
 
         TEntity Update(TEntity entity);
+        Task<IEnumerable<TEntity>> GetAllAsync();
     }
 }
