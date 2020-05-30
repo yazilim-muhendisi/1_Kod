@@ -82,32 +82,11 @@ USER VİEW MANAGER
 Kısaca custom bir sınıf olur bu da entity ile kullanıcı arasında köprü görevi görür.
 Layoutlarda bulunan asp actionlar href gibi bir taghelperdır. View Import tarafından geliyor.
 
------------------------------------- SİTE PANEL İŞLEMLERİ ---------------------------------
+------------------------------------ SİTE PROJESİ ÇALIŞTIRMA İŞLEMLERİ ---------------------------------
+Projeyi çalıştırmak için;
+Tarayıcınızdan .NetCore 3.1.3 Sdk dosyasını bilgisayarınıza kurun
+- Sql server data object alanından veri tabanı bağlantısını (ConnectionString) alın.
+InıtialCatalog kısmının "ApplicationDb" olmasına dikkat edin.
+- Bu bağlantıyı appsettings.json' daki DefaultConnection alanına yapıştırın ve aynı işlemi API Startup.cs ve Core projesi Startup.cs da bulunan veri tabanı bağlantı kısımlarına da yapın. Proje çalışacaktır.
 
-STARTUP: Startup.cs sınıfımızın içerisine bulunan ConfigureServices alanında projenin yapılandırılması gerekir. 
-Bu yapılandırma sırasında projemize Runtime.Complitation paketi entegre edilmesi gerekir. Bu paket bize projeyi kapatmadan alanların reflesh edilerek içeriğin güncellenmesini sağlar. Bu paketin eksikliği ile birlikte sayfayı yenileme işlemi projenin sürekli yeniden başlatılarak kullanılmasıyla giderilir.
-App.UseStaticFiles() metodu ile wwwroot klasörü kullanıma açılmış olur.
-App.UseWithDefaultRoute() metodu bize varsayılan olarak oluşturulan Home Controllerın içindeki Index metodunu çalıştırır. 
-İd si opsiyoneldir. 
-
-WWWROOT: Projede wwroot klasörü altına yeni bir Content klasörü oluşturularak sitemizin template’i projeye dahil edilir. 
-wwwroot alanı css,javascript dosyaları, resimler gibi browserın ulaşması gerek tüm dosyaları içermektedir.
-
-LAYOUT: _Layout cstml dosyası View klasörünün içerisindeki Shared klasörü içerisinde bulunur. Diğer bir olması gereken _view.cshtml dosyası ile bağlantılıdır. Bu dosyalar header ve footer kısımlarımızı tutmamız için gereklidir. Fakat bu işlem yeterli olmamakla birlikte düzenlemeler yapılması gerekir.  
-Html kodları içerisindeki dosya yolları değiştiğinden dolayı href, src ve background kodlarında dosya yollarının düzeltilmesi gerekir. Bu işlemler yapılırken header ve footer arasında RenderBody() kodunun yazılması gerekir. Bu method türetilen bir .cshtml sayfasının ilk yayınlanacağı alanı ifade eder.
-
---- Sırada template’i parçalama ve gerekli yerlerinin eklenmesi işlemleri yapılacaktır. 
-İlk işlem Home Controller üzerinde gerçekleştirilir. Her bir layout alanının verileri Ana sayfada görüntülenmekteydi. Biz ana sayfada sadece Header ve Footer alanı kalacak şekilde işlemlerimiz oluşturacağız.
-
-HOME CONTROLLER: Layout’da bulunan tüm alanlar IActionResult metoduna bağlı olarak yazılır. Bu method Controller yapısına gelen isteklere göre işlem yapıp, kullanıcıya View ilgili isteğine göre bilgileri geri döndüren metottur. Bu metotların üzerine gelip Add View diyerek gerekli istek bilgilerini oluşturacağımız alanlarımızı yaratırız.
-
-ANASAYFA: IActionResult kullanıcı ile veri iletişimini sağladığından dolayı kullanıcıya gönderilecek veri sayfasını oluşturacağımız, _Layout alanından diğer sayfalarda görünmesini istemediğimiz kod parçasını buraya entegre ettik. Bu kod yapısı kullanıcı Ana sayfa isimli alana tıkladığında, görüntülenecek olan Slider kısmını ve Banner dediğimiz alanı ekrana yansıtır.
-
-ÜNİVERSİTELER: Kullanıcının bu kısma tıklamasıyla görüntülenecek olan İçerik ekranı, _Layout içerisindeki blogs kod parçacılarının bu alana entegre edilmesi sonucunda oluşturulur.
-
-ETKİNLİKLER: Bu alana ise kullanıcının Etkinlikler alanına tıklamasıyla beraber görebileceği _layout alanımızdaki courses isimli kod parçacıkların bulunduğu kısmı ekliyoruz.
-
-HAKKIMIZDA: Hakkımızda alanına_layout alanımızdaki about kod parçacıkları hakkimizda viewimize eklenir. Kullanıcının site hakkında bilgi alabileceği detaylı yazı ve yazı hakkında resim bu alanda görüntülenecektir. 
-
-İLETİŞİM: İletisim viewinde ise kullanıcıların yöneticileri görebilecekleri alanın entegresi yapılır. _Layout arasından content başlıklı kod parçası bu alana eklenir.
-
+İyi Çalışmalar
