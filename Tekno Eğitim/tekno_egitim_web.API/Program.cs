@@ -8,7 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using tekno_egitim_web.API;
 
-namespace tekno_egitim_web.aAPI
+namespace tekno_egitim_web.API
 {
     public class Program
     {

@@ -21,7 +21,6 @@ using tekno_egitim_web.API.Data_Transfer_Objects;
 using tekno_egitim_web.API.Extensions;
 using tekno_egitim_web.API.Filters;
 using tekno_egitim_web.core.Model;
-using tekno_egitim_web.core.Models;
 using tekno_egitim_web.core.Repository;
 using tekno_egitim_web.core.Services;
 using tekno_egitim_web.core.UnitOfWorks;
@@ -62,11 +61,11 @@ namespace tekno_egitim_web.API
 
             services.AddDbContext<ApplicationDbContext>(options =>
             {
-                options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"].ToString(), o =>
-                {
-                    o.MigrationsAssembly("tekno_egitim_web.data");
-                });
+                options.UseSqlServer("Data Source=DESKTOP-JITEBE9;Initial Catalog=ApplicationDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             });
+            services.AddMvc()
+                   .AddControllersAsServices();
+            services.AddControllers().AddControllersAsServices();
             services.AddControllers(o =>
             {
                 o.Filters.Add(new ValidationFilter());

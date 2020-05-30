@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tekno_egitim_web.data", "..
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tekno_egitim_web.services", "..\tekno_egitim_web.services\tekno_egitim_web.services.csproj", "{538A1F61-681F-4BEA-BF2E-CE6458B74DAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tekno_egitim_web.coreproject", "..\tekno_egitim_web.coreproject\tekno_egitim_web.coreproject.csproj", "{1442443D-AB57-4BFF-806D-A4524B9632B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tekno_egitim_web.coreproject", "..\tekno_egitim_web.coreproject\tekno_egitim_web.coreproject.csproj", "{1442443D-AB57-4BFF-806D-A4524B9632B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tekno_egitim_web.XUnitTest", "..\tekno_egitim_web.XUnitTest\tekno_egitim_web.XUnitTest.csproj", "{4BADDC5F-5685-421D-903A-37E37733CAF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{1442443D-AB57-4BFF-806D-A4524B9632B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1442443D-AB57-4BFF-806D-A4524B9632B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1442443D-AB57-4BFF-806D-A4524B9632B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BADDC5F-5685-421D-903A-37E37733CAF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BADDC5F-5685-421D-903A-37E37733CAF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BADDC5F-5685-421D-903A-37E37733CAF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BADDC5F-5685-421D-903A-37E37733CAF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
