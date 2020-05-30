@@ -33,6 +33,7 @@ namespace tekno_egitim_web.coreproject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<DbContext, ApplicationDbContext>();
             services.AddScoped<NotFoundFilter>();
             services.AddAutoMapper(typeof(Startup));
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
@@ -48,10 +49,7 @@ namespace tekno_egitim_web.coreproject
 
             services.AddDbContext<ApplicationDbContext>(options =>
             {
-                options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"].ToString(), o =>
-                {
-                    o.MigrationsAssembly("tekno_egitim_web.data");
-                });
+                options.UseSqlServer("Data Source=DESKTOP-JITEBE9;Initial Catalog=ApplicationDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             });
             services.AddControllersWithViews();
         }

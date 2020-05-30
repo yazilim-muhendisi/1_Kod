@@ -1,0 +1,54 @@
+﻿@model tekno_egitim_web.core.Model.Not
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Not</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.baslik)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.baslik)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.aciklama)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.aciklama)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.olusturulma)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.olusturulma)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.imageUrl)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.imageUrl)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.kategori_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.kategori_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.not_silme)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.not_silme)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.not_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -10,22 +10,22 @@ using tekno_egitim_web.data;
 
 namespace tekno_egitim_web.coreproject.Controllers
 {
-    public class KategoriController : Controller
+    public class NotsController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public KategoriController(ApplicationDbContext context)
+        public NotsController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Kategori
+        // GET: Nots
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Kategoris.ToListAsync());
+            return View(await _context.Nots.ToListAsync());
         }
 
-        // GET: Kategori/Details/5
+        // GET: Nots/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,39 +33,39 @@ namespace tekno_egitim_web.coreproject.Controllers
                 return NotFound();
             }
 
-            var kategoriler = await _context.Kategoris
-                .FirstOrDefaultAsync(m => m.kategori_id == id);
-            if (kategoriler == null)
+            var not = await _context.Nots
+                .FirstOrDefaultAsync(m => m.not_id == id);
+            if (not == null)
             {
                 return NotFound();
             }
 
-            return View(kategoriler);
+            return View(not);
         }
 
-        // GET: Kategori/Create
+        // GET: Nots/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Kategori/Create
+        // POST: Nots/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("kategori_id,kategori_ad,Silme")] Kategoriler kategoriler)
+        public async Task<IActionResult> Create([Bind("not_id,baslik,aciklama,olusturulma,imageUrl,kategori_id,not_silme")] Not not)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(kategoriler);
+                _context.Add(not);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(kategoriler);
+            return View(not);
         }
 
-        // GET: Kategori/Edit/5
+        // GET: Nots/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -73,22 +73,22 @@ namespace tekno_egitim_web.coreproject.Controllers
                 return NotFound();
             }
 
-            var kategoriler = await _context.Kategoris.FindAsync(id);
-            if (kategoriler == null)
+            var not = await _context.Nots.FindAsync(id);
+            if (not == null)
             {
                 return NotFound();
             }
-            return View(kategoriler);
+            return View(not);
         }
 
-        // POST: Kategori/Edit/5
+        // POST: Nots/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("kategori_id,kategori_ad,Silme")] Kategoriler kategoriler)
+        public async Task<IActionResult> Edit(int id, [Bind("not_id,baslik,aciklama,olusturulma,imageUrl,kategori_id,not_silme")] Not not)
         {
-            if (id != kategoriler.kategori_id)
+            if (id != not.not_id)
             {
                 return NotFound();
             }
@@ -97,12 +97,12 @@ namespace tekno_egitim_web.coreproject.Controllers
             {
                 try
                 {
-                    _context.Update(kategoriler);
+                    _context.Update(not);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!KategorilerExists(kategoriler.kategori_id))
+                    if (!NotExists(not.not_id))
                     {
                         return NotFound();
                     }
@@ -113,10 +113,10 @@ namespace tekno_egitim_web.coreproject.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(kategoriler);
+            return View(not);
         }
 
-        // GET: Kategori/Delete/5
+        // GET: Nots/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,30 +124,30 @@ namespace tekno_egitim_web.coreproject.Controllers
                 return NotFound();
             }
 
-            var kategoriler = await _context.Kategoris
-                .FirstOrDefaultAsync(m => m.kategori_id == id);
-            if (kategoriler == null)
+            var not = await _context.Nots
+                .FirstOrDefaultAsync(m => m.not_id == id);
+            if (not == null)
             {
                 return NotFound();
             }
 
-            return View(kategoriler);
+            return View(not);
         }
 
-        // POST: Kategori/Delete/5
+        // POST: Nots/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var kategoriler = await _context.Kategoris.FindAsync(id);
-            _context.Kategoris.Remove(kategoriler);
+            var not = await _context.Nots.FindAsync(id);
+            _context.Nots.Remove(not);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool KategorilerExists(int id)
+        private bool NotExists(int id)
         {
-            return _context.Kategoris.Any(e => e.kategori_id == id);
+            return _context.Nots.Any(e => e.not_id == id);
         }
     }
 }

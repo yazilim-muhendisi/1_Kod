@@ -1,33 +1,41 @@
-﻿@model IEnumerable<KategoriDto>
+﻿@model IEnumerable<tekno_egitim_web.core.Model.Kategoriler>
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Kategoriler</h1>
-<a class="btn btn-primary mb-3" asp-action="Create">Kategori ekle</a>
-<table class="table table-bordered">
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
     <thead>
         <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>İşlemler</th>
+            <th>
+                @Html.DisplayNameFor(model => model.kategori_ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Silme)
+            </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-
-                <td>@item.kategori_id</td>
-                <td>@item.kategori_ad</td>
-                <td>
-
-                    <a asp-action="Update" asp-route-id="@item.kategori_id">Güncelle</a>
-                    <a asp-action="Delete" asp-route-id="@item.kategori_id">Sil</a>
-                </td>
-            </tr>
-
-        }
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.kategori_ad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Silme)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.kategori_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.kategori_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.kategori_id">Delete</a>
+            </td>
+        </tr>
+}
     </tbody>
 </table>

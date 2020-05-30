@@ -10,22 +10,22 @@ using tekno_egitim_web.data;
 
 namespace tekno_egitim_web.coreproject.Controllers
 {
-    public class KategoriController : Controller
+    public class MakalesController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public KategoriController(ApplicationDbContext context)
+        public MakalesController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: Kategori
+        // GET: Makales
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Kategoris.ToListAsync());
+            return View(await _context.Makales.ToListAsync());
         }
 
-        // GET: Kategori/Details/5
+        // GET: Makales/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,39 +33,39 @@ namespace tekno_egitim_web.coreproject.Controllers
                 return NotFound();
             }
 
-            var kategoriler = await _context.Kategoris
-                .FirstOrDefaultAsync(m => m.kategori_id == id);
-            if (kategoriler == null)
+            var makale = await _context.Makales
+                .FirstOrDefaultAsync(m => m.makale_id == id);
+            if (makale == null)
             {
                 return NotFound();
             }
 
-            return View(kategoriler);
+            return View(makale);
         }
 
-        // GET: Kategori/Create
+        // GET: Makales/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Kategori/Create
+        // POST: Makales/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("kategori_id,kategori_ad,Silme")] Kategoriler kategoriler)
+        public async Task<IActionResult> Create([Bind("makale_id,baslik,aciklama,olusturulma,imageUrl,kategori_id,makale_silme")] Makale makale)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(kategoriler);
+                _context.Add(makale);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(kategoriler);
+            return View(makale);
         }
 
-        // GET: Kategori/Edit/5
+        // GET: Makales/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -73,22 +73,22 @@ namespace tekno_egitim_web.coreproject.Controllers
                 return NotFound();
             }
 
-            var kategoriler = await _context.Kategoris.FindAsync(id);
-            if (kategoriler == null)
+            var makale = await _context.Makales.FindAsync(id);
+            if (makale == null)
             {
                 return NotFound();
             }
-            return View(kategoriler);
+            return View(makale);
         }
 
-        // POST: Kategori/Edit/5
+        // POST: Makales/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("kategori_id,kategori_ad,Silme")] Kategoriler kategoriler)
+        public async Task<IActionResult> Edit(int id, [Bind("makale_id,baslik,aciklama,olusturulma,imageUrl,kategori_id,makale_silme")] Makale makale)
         {
-            if (id != kategoriler.kategori_id)
+            if (id != makale.makale_id)
             {
                 return NotFound();
             }
@@ -97,12 +97,12 @@ namespace tekno_egitim_web.coreproject.Controllers
             {
                 try
                 {
-                    _context.Update(kategoriler);
+                    _context.Update(makale);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!KategorilerExists(kategoriler.kategori_id))
+                    if (!MakaleExists(makale.makale_id))
                     {
                         return NotFound();
                     }
@@ -113,10 +113,10 @@ namespace tekno_egitim_web.coreproject.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(kategoriler);
+            return View(makale);
         }
 
-        // GET: Kategori/Delete/5
+        // GET: Makales/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,30 +124,30 @@ namespace tekno_egitim_web.coreproject.Controllers
                 return NotFound();
             }
 
-            var kategoriler = await _context.Kategoris
-                .FirstOrDefaultAsync(m => m.kategori_id == id);
-            if (kategoriler == null)
+            var makale = await _context.Makales
+                .FirstOrDefaultAsync(m => m.makale_id == id);
+            if (makale == null)
             {
                 return NotFound();
             }
 
-            return View(kategoriler);
+            return View(makale);
         }
 
-        // POST: Kategori/Delete/5
+        // POST: Makales/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var kategoriler = await _context.Kategoris.FindAsync(id);
-            _context.Kategoris.Remove(kategoriler);
+            var makale = await _context.Makales.FindAsync(id);
+            _context.Makales.Remove(makale);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool KategorilerExists(int id)
+        private bool MakaleExists(int id)
         {
-            return _context.Kategoris.Any(e => e.kategori_id == id);
+            return _context.Makales.Any(e => e.makale_id == id);
         }
     }
 }
