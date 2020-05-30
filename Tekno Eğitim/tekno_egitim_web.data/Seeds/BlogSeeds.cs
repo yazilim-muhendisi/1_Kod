@@ -25,7 +25,8 @@ namespace tekno_egitim_web.data.Seeds
                     aciklama = "DenemeDenemeDenemeDeneme",
                     olusturulma = DateTime.Now,
                     imageUrl = "",
-                    kategori_id = _id[1]
+                    kategori_id = _id[0],
+                   blog_silme = false
                 },
                 new Blog
                 {
@@ -34,7 +35,8 @@ namespace tekno_egitim_web.data.Seeds
                     aciklama = "DenemeDenemeDenemeDeneme2",
                     olusturulma = DateTime.Now,
                     imageUrl = "",
-                    kategori_id = _id[1]
+                    kategori_id = _id[0],
+                    blog_silme = false
                 }
 
                 );

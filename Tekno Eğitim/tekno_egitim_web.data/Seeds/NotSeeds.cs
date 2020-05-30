@@ -18,23 +18,25 @@ namespace tekno_egitim_web.data.Seeds
         public void Configure(EntityTypeBuilder<Not> builder)
         {
             builder.HasData(
-                  new Not
+                  new 
                   {
                       not_id = 1,
                       baslik = "NotDeneme",
                       aciklama = "DenemeDenemeDenemeDeneme",
                       olusturulma = DateTime.Now,
                       imageUrl = "",
-                      kategori_id = _id[4]
+                      kategori_id = _id[3],
+                      not_silme = false
                   },
-                  new Not
+                  new 
                   {
                       not_id = 2,
                       baslik = "NotDeneme2",
                       aciklama = "DenemeDenemeDenemeDeneme2",
                       olusturulma = DateTime.Now,
                       imageUrl = "",
-                      kategori_id = _id[4]
+                      kategori_id = _id[3],
+                      not_silme = false
                   }
 
                   );

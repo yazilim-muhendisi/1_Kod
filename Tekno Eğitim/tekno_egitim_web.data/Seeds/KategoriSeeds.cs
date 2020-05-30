@@ -20,31 +20,31 @@ namespace tekno_egitim_web.data.Seeds
             builder.HasData(
                  new Kategoriler
                  {
-                     kategori_id = _id[1],
+                     kategori_id = _id[0],
                      kategori_ad = "Blog",
 
                  },
                  new Kategoriler
                  {
-                     kategori_id = _id[2],
+                     kategori_id = _id[1],
                      kategori_ad = "Haber",
 
                  },
                  new Kategoriler
                  {
-                     kategori_id = _id[3],
+                     kategori_id = _id[2],
                      kategori_ad = "Makale",
 
                  },
                  new Kategoriler
                  {
-                     kategori_id = _id[4],
+                     kategori_id = _id[3],
                      kategori_ad = "Not",
 
                  },
                  new Kategoriler
                  {
-                     kategori_id = _id[5],
+                     kategori_id = _id[4],
                      kategori_ad = "Video",
 
                  });

@@ -18,23 +18,25 @@ namespace tekno_egitim_web.data.Seeds
         public void Configure(EntityTypeBuilder<Haber> builder)
         {
             builder.HasData(
-                  new Haber
+                  new 
                   {
                       haber_id = 1,
                       baslik = "HaberDeneme",
                       aciklama = "DenemeDenemeDenemeDeneme",
                       olusturulma = DateTime.Now,
                       imageUrl = "",
-                      kategori_id = _id[2]
+                      kategori_id = _id[1],
+                      haber_silme =false
                   },
-                  new Haber
+                  new 
                   {
                       haber_id = 2,
                       baslik = "HaberDeneme2",
                       aciklama = "DenemeDenemeDenemeDeneme2",
                       olusturulma = DateTime.Now,
                       imageUrl = "",
-                      kategori_id = _id[2]
+                      kategori_id = _id[1],
+                      haber_silme = false
                   }
                   );
         }

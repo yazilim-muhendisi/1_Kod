@@ -18,6 +18,7 @@ namespace tekno_egitim_web.data.Configurations
             builder.Property(x => x.aciklama).IsRequired();
             builder.Property(x => x.olusturulma).IsRequired().HasColumnType("datetime"); 
             builder.Property(x => x.imageUrl).HasMaxLength(200);
+            builder.Property(x => x.haber_silme);
         }
     }
 }
