@@ -1,5 +1,5 @@
 
------------------------------------------------------ ADMİN-ÜYE İŞLEMLERİ----------------------------------------------------------
+-------------------------------------------------- ADMİN-ÜYE İŞLEMLERİ------------------------------
 Projede Kullanılan Teknolojiler:
 -ASP.NET CORE- MVC  
 -IDENTİTY API
@@ -88,5 +88,3 @@ Tarayıcınızdan .NetCore 3.1.3 Sdk dosyasını bilgisayarınıza kurun
 - Sql server data object alanından veri tabanı bağlantısını (ConnectionString) alın.
 InıtialCatalog kısmının "ApplicationDb" olmasına dikkat edin.
 - Bu bağlantıyı appsettings.json' daki DefaultConnection alanına yapıştırın ve aynı işlemi API Startup.cs ve Core projesi Startup.cs da bulunan veri tabanı bağlantı kısımlarına da yapın. Proje çalışacaktır.
-
-İyi Çalışmalar
