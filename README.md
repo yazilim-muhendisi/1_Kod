@@ -1,4 +1,4 @@
------------------------------------------------TEKNO EĞİTİM PROJESİ KODLAMA STANDARTLARI-------------------------------------------
+----------------------------------TEKNO EĞİTİM PROJESİ KODLAMA STANDARTLARI-------------------------------
 
 *Projede Kullanılan Teknolojiler:
 
