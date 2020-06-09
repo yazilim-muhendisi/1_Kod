@@ -1,11 +1,13 @@
 -----------------------------------------------TEKNO EĞİTİM PROJESİ KODLAMA STANDARTLARI-------------------------------------------
+
 *Projede Kullanılan Teknolojiler:
 
 - ASP.NET CORE MVC ÇOK KATMANLI MİMARİ 
 
--ASP.NET CORE IDENTITY 
+- ASP.NET CORE IDENTITY 
 
 Bu projede kullanılan yöntem  Entity FrameWork Codefirst yöntemidir.
+
 Oluşturulan proje uygulamasının verilerini saklamak ve yönetmek amacıyla Microsoft Azure Cloud kullanılacaktır.
 
 ASP.NET CORE Kullanılma Sebebi:
