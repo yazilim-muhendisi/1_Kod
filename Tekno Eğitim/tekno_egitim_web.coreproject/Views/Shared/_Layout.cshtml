@@ -2,33 +2,33 @@
 <html lang="zxx">
 
 <head>
-  <meta charset="utf-8">
-  <title>EĞİTİM AĞI || @ViewBag.Title </title>
+    <meta charset="utf-8">
+    <title>EĞİTİM AĞI || @ViewBag.Title </title>
 
-  <!-- mobile responsive meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  <!-- ** Plugins Needed for the Project ** -->
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="@Url.Content("~/Content/plugins/bootstrap/bootstrap.min.css")">
-  <!-- slick slider -->
-  <link rel="stylesheet" href="@Url.Content("~/Content/plugins/slick/slick.css")">
-  <!-- themefy-icon -->
-  <link rel="stylesheet" href="@Url.Content("~/Content/plugins/themify-icons/themify-icons.css")">
-  <!-- animation css -->
-  <link rel="stylesheet" href="@Url.Content("~/Content/plugins/animate/animate.css")">
-  <!-- aos -->
-  <link rel="stylesheet" href="@Url.Content("~/Content/plugins/aos/aos.css")">
-  <!-- venobox popup -->
-  <link rel="stylesheet" href="@Url.Content("~/Content/plugins/venobox/venobox.css")">
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- Main Stylesheet -->
-  <link href="@Url.Content("~/Content/css/style.css")" rel="stylesheet">
-  
-  <!--Favicon-->
-  <link rel="shortcut icon" href="@Url.Content("~/Content/images/favicon.ico")" type="image/x-icon">
-  <link rel="icon" href="@Url.Content("~/Content/images/favicon.ico")" type="image/x-icon">
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/plugins/bootstrap/bootstrap.min.css")">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/plugins/slick/slick.css")">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/plugins/themify-icons/themify-icons.css")">
+    <!-- animation css -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/plugins/animate/animate.css")">
+    <!-- aos -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/plugins/aos/aos.css")">
+    <!-- venobox popup -->
+    <link rel="stylesheet" href="@Url.Content("~/Content/plugins/venobox/venobox.css")">
+
+    <!-- Main Stylesheet -->
+    <link href="@Url.Content("~/Content/css/style.css")" rel="stylesheet">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="@Url.Content("~/Content/images/favicon.ico")" type="image/x-icon">
+    <link rel="icon" href="@Url.Content("~/Content/images/favicon.ico")" type="image/x-icon">
     @RenderSection("head", false);
 
 </head>
@@ -53,8 +53,8 @@
                     <div class="col-lg-8 text-center text-lg-right">
                         <ul class="list-inline">
 
-                            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#" data-toggle="modal" data-target="#loginModal">OTURUM AÇ</a></li>
-                            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#" data-toggle="modal" data-target="#signupModal">KAYIT OL</a></li>
+                            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="https://localhost:44362/Home/Login">OTURUM AÇ</a></li>
+                            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" target="_blank" href="https://localhost:44362/Home/SignUp" >KAYIT OL</a></li>
                         </ul>
                     </div>
                 </div>
@@ -62,9 +62,19 @@
         </div>
         <!-- navbar -->
         <div class="navigation w-100">
+            <div class="" style="z-index:99999;    background-color: indianred;width:100%;height:26px;">
+                <div style="float:left;margin-left:100px;"><a class="dropdown-item" href="../../Videos/Top">En Çok İzlenen Videolar</a></div>
+                <div style="float:left;background-color: indianred!important;"><a class="dropdown-item" href="/Home/Blog">En Çok Okunan Makaleler</a></div>
+                <div style="float:left;background-color: indianred!important;"><a class="dropdown-item" href="/Home/Blog">En Çok Okunan Haberler</a></div>
+                <div style="float:left;background-color: indianred!important;"><a class="dropdown-item" href="/Home/Blog">En Çok Görüntülenen Blog Yazıları</a></div>
+                <div style="float:left;background-color: indianred!important;"><a class="dropdown-item" href="/Home/Blog">En Çok Görüntülenen Notlar</a></div>
+                <div style="float:left;background-color: indianred!important;"></div>
+            </div>
+
             <div class="container">
+
                 <nav class="navbar navbar-expand-lg navbar-light p-0">
-                    <a class="navbar-brand" href="@Url.Content("~/Content/index.html")"><img src="@Url.Content("~/Content/images/logo1.png")" alt="logo"></a>
+                    <a class="navbar-brand" href="@Url.Content("~/Content/index.html")"><img src="@Url.Content("~/Content/images/logo1.jpg")" style="height:88px;" alt="logo"></a>
                     <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
                             aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -81,19 +91,7 @@
                             <li class="nav-item @@events">
                                 <a class="nav-link" href="/Home/Etkinlik">ETKİNLİKLER</a>
                             </li>
-                            <li class="nav-item dropdown view">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                                   aria-haspopup="true" aria-expanded="false">
-                                    Enler
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/Home/Blog">En Çok İzlenen Videolar</a>
-                                    <a class="dropdown-item" href="/Home/Blog">En Çok Okunan Makaleler</a>
-                                    <a class="dropdown-item" href="/Home/Blog">En Çok Okunan Haberler</a>
-                                    <a class="dropdown-item" href="/Home/Blog">En Çok Görüntülenen Blog Yazıları</a>
-                                    <a class="dropdown-item" href="/Home/Blog">En Çok Görüntülenen Notlar</a>
-                                </div>
-                            </li>
+                           
                             <li class="nav-item @@about">
                                 <a class="nav-link" href="/Home/Hakkimizda">HAKKIMIZDA</a>
                             </li>
@@ -106,6 +104,7 @@
             </div>
         </div>
     </header>
+
     <!-- /header -->
     <!-- Modal -->
     <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -118,8 +117,9 @@
                     </button>
                 </div>
                 <div class="modal-body">
+                    
                     <div class="login">
-                        <form action="#" class="row">
+                        <form action="ModelOnly" class="row">
                             <div class="col-12">
                                 <input type="text" class="form-control mb-3" id="signupName" name="signupName" placeholder="Adınız Soyadınız">
                             </div>
@@ -127,12 +127,36 @@
                                 <input type="email" class="form-control mb-3" id="signupEmail" name="signupEmail" placeholder="Email adresi giriniz.">
                             </div>
                             <div class="col-12">
-                                <input type="email" class="form-control mb-3" id="signupSchool" name="signupSchool" placeholder="Okul Seçin">
+                                <input for="text" class="form-control mb-3" id="signupSchool" name="signupSchool" placeholder="Kullanıcı Adınızı Giriniz">
+                            </div>
+                            <div class="col-12">
+                                <input type="number" class="form-control mb-3" id="signupSchool" name="signupSchool" placeholder="Telefon Numarası Giriniz">
                             </div>
                             <div class="col-12">
                                 <input type="password" class="form-control mb-3" id="signupPassword" name="signupPassword" placeholder="Şifre Girin">
                             </div>
+                            <div style="text-align:center">
+                                <p>
+                                    &emsp;
+                                    <font face="Times New Roman" size="4" color="grey">
+                                        <b>Üniversite Seçiniz</b>
+                                    </font>
+                                </p>
+                                <select name="Üniversite Seçiniz">
+                                    <option></option>
+                                    @foreach (var item in SessionObject._universiteler)
+                                    {
+                                        <option>@item.uni_adi</option>
+                                    }
+
+                                    @*<option></option>
+                                    <option> Bozok Üniversitesi</option>
+                                    <option> Sakarya Üniversitesi</option>
+                                    <option> Karadeniz Teknik Üniversitesi</option>*@
+                                </select>
+                            </div>
                             <div class="col-12">
+                                <p>&emsp;</p>
                                 <button type="submit" class="btn btn-primary">KAYIT OL</button>
                             </div>
                         </form>
@@ -178,7 +202,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
                         <!-- logo -->
-                        <a class="logo-footer" href="@Url.Content("~/Content/index.html")"><img class="img-fluid mb-4" src="@Url.Content("~/Content/images/logo1.png")" alt="logo"></a>
+                        <a class="logo-footer" href="@Url.Content("~/Content/index.html")"><img class="img-fluid mb-4" src="@Url.Content("~/Content/images/logo1.jpg")" alt="logo"></a>
 
                     </div>
                     <!-- company -->

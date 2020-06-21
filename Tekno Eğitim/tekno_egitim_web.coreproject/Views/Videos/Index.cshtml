@@ -3,7 +3,14 @@
 @{
     ViewData["Title"] = "Index";
 }
-
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 <h1>Index</h1>
 
 <p>
@@ -34,32 +41,33 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.baslik)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.aciklama)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.olusturulma)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.videoUrl)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.kategori_id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.video_silme)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.video_id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.video_id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.video_id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.baslik)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.aciklama)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.olusturulma)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.videoUrl)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.kategori_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.video_silme)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.video_id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.video_id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.video_id">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

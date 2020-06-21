@@ -79,133 +79,308 @@
     </div>
 </section>
 <!-- /page title -->
-<!-- blogs -->
-<section class="section">
-    <div class="container">
-        <div class="row">
+<p><br /></p>
+<div style="text-align:left">
+    <p>
+        <font face="Times New Roman" size="6" color="grey">
+            <b>&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;BLOG YAZILARI</b>
+        </font>
+    </p>
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <
+                @foreach (var item in ViewData["bloglar"] as List<tekno_egitim_web.core.Model.Blog>)
+                {
+                    
+                            <img class="card-img-top rounded-0" src="@item.imageUrl" alt="Post thumb">
+                           
+                                <!-- post meta -->
+                                <ul class="list-inline mb-3">
+                                    <!-- post date -->
+                                    <li class="list-inline-item mr-3 ml-0">@item.olusturulma</li>
+                                    <!-- author -->
+                                </ul>
+                                <a href="../../Blogs/Details?id=@item.blog_id">
+                                    <h4 class="card-title">@item.baslik</h4>
+                                </a>
 
-            <!-- blog post -->
-            <article class="col-lg-4 col-sm-6 mb-5">
-                <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
-                    <img class="card-img-top rounded-0" src="~/Content/images/blog/blogpost3.jpg" alt="Post thumb">
-                    <div class="card-body">
-                        <!-- post meta -->
-                        <ul class="list-inline mb-3">
-                            <!-- post date -->
-                            <li class="list-inline-item mr-3 ml-0">27 Nisan 2020</li>
-                            <!-- author -->
-                        </ul>
-                        <a href=""~/Content/üniversiteler.html">
-                            <h4 class="card-title">ÜNİVERSİTEMİZ PERSONELİNE HOBİ BAHÇELERİ VERİLDİ</h4>
-                        </a>
+                                <a href="../../Blogs/Details?id=@item.blog_id" class="btn btn-primary btn-sm">Daha Fazla</a>
+                           
                         
-                        <a href=""~/Content/üniversiteler.html" class="btn btn-primary btn-sm">Daha Fazla</a>
-                    </div>
+                    
+                }
+                <div class="card-body">
+                    <a href="../../Blogs/Create" class="btn btn-primary btn-sm">Yeni Blog Ekle</a>
                 </div>
-            </article>
-            <!-- blog post -->
-            <article class="col-lg-4 col-sm-6 mb-5">
-                <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
-                    <img class="card-img-top rounded-0" src="~/Content/images/blog/blogpost2.jpg" alt="Post thumb">
-                    <div class="card-body">
-                        <!-- post meta -->
-                        <ul class="list-inline mb-3">
-                            <!-- post date -->
-                            <li class="list-inline-item mr-3 ml-0">4 Nisan 2020</li>
-                            <!-- author -->
-
-                        </ul>
-                        <a href="~/Content/üniversiteler2.html">
-                            <h4 class="card-title">TEKNİK BİLİMLER MESLEK YÜKSEK OKULUN’DAN KORONAVİRÜS SÜRECİNDE ÖNEMLİ ÇALIŞMALAR</h4>
-                        </a>
-
-                        <a href="~/Content/üniversiteler2.html" class="btn btn-primary btn-sm">Daha Fazla</a>
-                    </div>
-                </div>
-            </article>
-            <!-- blog post -->
-            <article class="col-lg-4 col-sm-6 mb-5">
-                <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
-                    <img class="card-img-top rounded-0" src="~/Content/images/blog/blogpost1.jpg" alt="Post thumb">
-                    <div class="card-body">
-                        <!-- post meta -->
-                        <ul class="list-inline mb-3">
-                            <!-- post date -->
-                            <li class="list-inline-item mr-3 ml-0">17 Nisan 2020</li>
-                            <!-- author -->
-
-                        </ul>
-                        <a href="~/Content/üniversiteler3.html">
-                            <h4 class="card-title">ÜNİVERSİTEMİZ “YOBÜ” MARKASI İLE KENEVİR YAĞI KATKILI ANTİBAKTERİYEL SIVI SABUN ÜRETTİ</h4>
-                        </a>
-
-                        <a href="~/Content/üniversiteler3.html" class="btn btn-primary btn-sm">Daha Fazla</a>
-                    </div>
-                </div>
-            </article>
-            <!-- blog post -->
-            <article class="col-lg-4 col-sm-6 mb-5">
-                <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
-                    <img class="card-img-top rounded-0" src="~/Content/images/blog/blogpost4.jpg" alt="Post thumb">
-                    <div class="card-body">
-                        <!-- post meta -->
-                        <ul class="list-inline mb-3">
-                            <!-- post date -->
-                            <li class="list-inline-item mr-3 ml-0">18 Nisan 2020</li>
-                            <!-- author -->
-                            <li class="list-inline-item mr-3 ml-0">Gözde Duru</li>
-                        </ul>
-                        <a href="~/Content/üniversiteler4.html">
-                            <h4 class="card-title">Biyokimya Dersi Ders Notları</h4>
-                        </a>
-                      
-                        <a href="~/Content/üniversiteler4.html" class="btn btn-primary btn-sm">Daha Fazla</a>
-                    </div>
-                </div>
-            </article>
-            <!-- blog post -->
-            <article class="col-lg-4 col-sm-6 mb-5">
-                <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
-                    <img class="card-img-top rounded-0" src="~/Content/images/blog/blogpost5.jpg" alt="Post thumb">
-                    <div class="card-body">
-                        <!-- post meta -->
-                        <ul class="list-inline mb-3">
-                            <!-- post date -->
-                            <li class="list-inline-item mr-3 ml-0">2 Mayıs 2020</li>
-                            <!-- author -->
-                            <li class="list-inline-item mr-3 ml-0">İbrahim Kutlu</li>
-                        </ul>
-                        <a href="~/Content/üniversiteler5.html">
-                            <h4 class="card-title">Olasılık Ve İstatistik Dersi Ders Notları</h4>
-                        </a>
-                      
-                        <a href="~/Content/üniversiteler5.html" class="btn btn-primary btn-sm">Daha fazla</a>
-                    </div>
-                </div>
-            </article>
-             <!-- blog post -->
-            <article class="col-lg-4 col-sm-6 mb-5">
-                <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
-                    <img class="card-img-top rounded-0" src="~/Content/images/blog/blogpost6.jpg" alt="Post thumb">
-                    <div class="card-body">
-                        <!-- post meta -->
-                        <ul class="list-inline mb-3">
-                            <!-- post date -->
-                            <li class="list-inline-item mr-3 ml-0">3 Mayıs 2020</li>
-                            <!-- author -->
-                            <li class="list-inline-item mr-3 ml-0">Prof. Dr. R. Cevat Özden</li>
-                        </ul>
-                        <a href="~/Content/üniversiteler6.html">
-                            <h4 class="card-title">Siber Saldırı ve Siber Güvenlik</h4>
-                        </a>
-
-                        <a href="~/Content/üniversiteler6.html" class="btn btn-primary btn-sm">Daha fazla</a>
-                    </div>
-                </div>
-            </article>
-            <!-- blog post -->
-            
+            </div>
         </div>
-    </div>
-</section>
-<!-- /blogs -->
+    </section>
+</div>
+<div style="text-align:left">
+    <p>
+        <font face="Times New Roman" size="6" color="grey">
+            <b>&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;MAKALELER</b>
+        </font>
+    </p>
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <!-- blog post -->
+                <article class="col-lg-4 col-sm-6 mb-5">
+                    <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+                        <img class="card-img-top rounded-0" src="~/Content/images/blog/blogpost3.jpg" alt="Post thumb">
+                        <div class="card-body">
+                            <!-- post meta -->
+                            <ul class="list-inline mb-3">
+                                <!-- post date -->
+                                <li class="list-inline-item mr-3 ml-0">27 Nisan 2020</li>
+                                <!-- author -->
+                            </ul>
+                            <a href="~/Content/üniversiteler.html">
+                                <h4 class="card-title">ÜNİVERSİTEMİZ PERSONELİNE HOBİ BAHÇELERİ VERİLDİ</h4>
+                            </a>
+
+                            <a href="~/Content/üniversiteler.html" class="btn btn-primary btn-sm">Daha Fazla</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- blog post -->
+                <article class="col-lg-4 col-sm-6 mb-5">
+                    <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+                        <img class="card-img-top rounded-0" src="~/Content/images/blog/blogpost2.jpg" alt="Post thumb">
+                        <div class="card-body">
+                            <!-- post meta -->
+                            <ul class="list-inline mb-3">
+                                <!-- post date -->
+                                <li class="list-inline-item mr-3 ml-0">4 Nisan 2020</li>
+                                <!-- author -->
+
+                            </ul>
+                            <a href="~/Content/üniversiteler2.html">
+                                <h4 class="card-title">TEKNİK BİLİMLER MESLEK YÜKSEK OKULUN’DAN KORONAVİRÜS SÜRECİNDE ÖNEMLİ ÇALIŞMALAR</h4>
+                            </a>
+
+                            <a href="~/Content/üniversiteler2.html" class="btn btn-primary btn-sm">Daha Fazla</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- blog post -->
+                <article class="col-lg-4 col-sm-6 mb-5">
+                    <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+                        <img class="card-img-top rounded-0" src="~/Content/images/blog/blogpost1.jpg" alt="Post thumb">
+                        <div class="card-body">
+                            <!-- post meta -->
+                            <ul class="list-inline mb-3">
+                                <!-- post date -->
+                                <li class="list-inline-item mr-3 ml-0">17 Nisan 2020</li>
+                                <!-- author -->
+
+                            </ul>
+                            <a href="~/Content/üniversiteler3.html">
+                                <h4 class="card-title">ÜNİVERSİTEMİZ “YOBÜ” MARKASI İLE KENEVİR YAĞI KATKILI ANTİBAKTERİYEL SIVI SABUN ÜRETTİ</h4>
+                            </a>
+
+                            <a href="~/Content/üniversiteler3.html" class="btn btn-primary btn-sm">Daha Fazla</a>
+                        </div>
+                    </div>
+                </article>
+                <a class="btn btn-primary btn-sm">Daha fazla</a>
+                <!-- blog post -->
+                <!-- blog post -->
+
+            </div>
+        </div>
+    </section>
+</div>
+<div style="text-align:left">
+    <p>
+        <font face="Times New Roman" size="6" color="grey">
+            <b>&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;DERS NOTLARI</b>
+        </font>
+    </p>
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <!-- blog post -->
+                <article class="col-lg-4 col-sm-6 mb-5">
+                    <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+                        <img class="card-img-top rounded-0" src="~/Content/images/blog/blogpost3.jpg" alt="Post thumb">
+                        <div class="card-body">
+                            <!-- post meta -->
+                            <ul class="list-inline mb-3">
+                                <!-- post date -->
+                                <li class="list-inline-item mr-3 ml-0">27 Nisan 2020</li>
+                                <!-- author -->
+                            </ul>
+                            <a href="~/Content/üniversiteler.html">
+                                <h4 class="card-title">ÜNİVERSİTEMİZ PERSONELİNE HOBİ BAHÇELERİ VERİLDİ</h4>
+                            </a>
+
+                            <a href="~/Content/üniversiteler.html" class="btn btn-primary btn-sm">Daha Fazla</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- blog post -->
+                <article class="col-lg-4 col-sm-6 mb-5">
+                    <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+                        <img class="card-img-top rounded-0" src="~/Content/images/blog/blogpost5.jpg" alt="Post thumb">
+                        <div class="card-body">
+                            <!-- post meta -->
+                            <ul class="list-inline mb-3">
+                                <!-- post date -->
+                                <li class="list-inline-item mr-3 ml-0">2 Mayıs 2020</li>
+                                <!-- author -->
+                                <li class="list-inline-item mr-3 ml-0">İbrahim Kutlu</li>
+                            </ul>
+                            <a href="~/Content/üniversiteler5.html">
+                                <h4 class="card-title">Olasılık Ve İstatistik Dersi Ders Notları</h4>
+                            </a>
+
+                            <a href="~/Content/üniversiteler5.html" class="btn btn-primary btn-sm">Daha fazla</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- blog post -->
+                <article class="col-lg-4 col-sm-6 mb-5">
+                    <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+                        <img class="card-img-top rounded-0" src="~/Content/images/blog/blogpost6.jpg" alt="Post thumb">
+                        <div class="card-body">
+                            <!-- post meta -->
+                            <ul class="list-inline mb-3">
+                                <!-- post date -->
+                                <li class="list-inline-item mr-3 ml-0">3 Mayıs 2020</li>
+                                <!-- author -->
+                                <li class="list-inline-item mr-3 ml-0">Prof. Dr. R. Cevat Özden</li>
+                            </ul>
+                            <a href="~/Content/üniversiteler6.html">
+                                <h4 class="card-title">Siber Saldırı ve Siber Güvenlik</h4>
+                            </a>
+
+                            <a href="~/Content/üniversiteler6.html" class="btn btn-primary btn-sm">Daha fazla</a>
+                        </div>
+                    </div>
+                </article>
+                <a class="btn btn-primary btn-sm">Daha fazla</a>
+                <!-- blog post -->
+
+            </div>
+        </div>
+    </section>
+</div>
+<div style="text-align:left">
+    <p>
+        <font face="Times New Roman" size="6" color="grey">
+            <b>&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;BLOG YAZILARI</b>
+        </font>
+    </p>
+    <section class="section">
+        <div class="container">
+            <div class="row">
+
+                <!-- blog post -->
+                <article class="col-lg-4 col-sm-6 mb-5">
+                    <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+                        <img class="card-img-top rounded-0" src="~/Content/images/blog/blogpost4.jpg" alt="Post thumb">
+                        <div class="card-body">
+                            <!-- post meta -->
+                            <ul class="list-inline mb-3">
+                                <!-- post date -->
+                                <li class="list-inline-item mr-3 ml-0">18 Nisan 2020</li>
+                                <!-- author -->
+                                <li class="list-inline-item mr-3 ml-0">Gözde Duru</li>
+                            </ul>
+                            <a href="~/Content/üniversiteler4.html">
+                                <h4 class="card-title">Biyokimya Dersi Ders Notları</h4>
+                            </a>
+
+                            <a href="~/Content/üniversiteler4.html" class="btn btn-primary btn-sm">Daha Fazla</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- blog post -->
+                <article class="col-lg-4 col-sm-6 mb-5">
+                    <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+                        <img class="card-img-top rounded-0" src="~/Content/images/blog/blogpost5.jpg" alt="Post thumb">
+                        <div class="card-body">
+                            <!-- post meta -->
+                            <ul class="list-inline mb-3">
+                                <!-- post date -->
+                                <li class="list-inline-item mr-3 ml-0">2 Mayıs 2020</li>
+                                <!-- author -->
+                                <li class="list-inline-item mr-3 ml-0">İbrahim Kutlu</li>
+                            </ul>
+                            <a href="~/Content/üniversiteler5.html">
+                                <h4 class="card-title">Olasılık Ve İstatistik Dersi Ders Notları</h4>
+                            </a>
+
+                            <a href="~/Content/üniversiteler5.html" class="btn btn-primary btn-sm">Daha fazla</a>
+                        </div>
+                    </div>
+                </article>
+                <!-- blog post -->
+                <article class="col-lg-4 col-sm-6 mb-5">
+                    <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+                        <img class="card-img-top rounded-0" src="~/Content/images/blog/blogpost6.jpg" alt="Post thumb">
+                        <div class="card-body">
+                            <!-- post meta -->
+                            <ul class="list-inline mb-3">
+                                <!-- post date -->
+                                <li class="list-inline-item mr-3 ml-0">3 Mayıs 2020</li>
+                                <!-- author -->
+                                <li class="list-inline-item mr-3 ml-0">Prof. Dr. R. Cevat Özden</li>
+                            </ul>
+                            <a href="~/Content/üniversiteler6.html">
+                                <h4 class="card-title">Siber Saldırı ve Siber Güvenlik</h4>
+                            </a>
+
+                            <a href="~/Content/üniversiteler6.html" class="btn btn-primary btn-sm">Daha fazla</a>
+                        </div>
+                    </div>
+                </article>
+                <a class="btn btn-primary btn-sm">Daha fazla</a>
+                <!-- blog post -->
+
+            </div>
+        </div>
+    </section>
+</div>
+<div style="text-align:left">
+    <p>
+        <font face="Times New Roman" size="6" color="grey">
+            <b>&emsp;&emsp; &emsp;&emsp;&emsp;&emsp;&emsp;VİDEOLAR</b>
+        </font>
+    </p>
+    <section class="section">
+        <div class="container">
+            <div class="row">
+                <
+                @foreach (var item in ViewData["videolar"] as List<tekno_egitim_web.core.Model.Video>)
+                {
+                    <article class="col-lg-4 col-sm-6 mb-5">
+                        <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+                            <iframe width="372" height="252" src="@item.videoUrl" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="card-body">
+                                <!-- post meta -->
+                                <ul class="list-inline mb-3">
+                                    <!-- post date -->
+                                    <li class="list-inline-item mr-3 ml-0">@item.olusturulma</li>
+                                    <!-- author -->
+                                </ul>
+                                <a href="../../Videos/Details?id=@item.video_id">
+                                    <h4 class="card-title">@item.baslik</h4>
+                                </a>
+
+                                <a href="../../Videos/Details?id=@item.video_id" class="btn btn-primary btn-sm">Daha Fazla</a>
+                            </div>
+                        </div>
+                    </article>
+                }
+                <div class="card-body">
+                    <a href="../../Videos/Create" class="btn btn-primary btn-sm">Yeni Video Ekle</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
