@@ -9,5 +9,6 @@ namespace tekno_egitim_web.core.Services
     public interface IVideoServices : IService<Video>
     {
         Task<Video> GetWithKategoriByIdAsync(int video_id);
+        Task VideoKaydet(Video data);
     }
 }

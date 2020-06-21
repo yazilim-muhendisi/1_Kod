@@ -13,6 +13,7 @@ namespace tekno_egitim_web.core.Model
         public string videoUrl { get; set; }
         public int kategori_id { get; set; }
         public bool video_silme { get; set; }
+        public int izlenme_sayisi { get; set; }
 
         public virtual Kategoriler Kategoriler { get; set; }
     }

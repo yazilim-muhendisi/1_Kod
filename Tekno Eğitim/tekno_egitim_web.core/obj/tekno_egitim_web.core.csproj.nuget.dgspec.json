@@ -1,29 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ECEM YAMAN\\Desktop\\tekno_egitim_web\\tekno_egitim_web.core\\tekno_egitim_web.core.csproj": {}
+    "C:\\Users\\BEYZA DURNA\\Desktop\\SİTE ESKİ\\tekno_egitim_web\\tekno_egitim_web.core\\tekno_egitim_web.core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ECEM YAMAN\\Desktop\\tekno_egitim_web\\tekno_egitim_web.core\\tekno_egitim_web.core.csproj": {
+    "C:\\Users\\BEYZA DURNA\\Desktop\\SİTE ESKİ\\tekno_egitim_web\\tekno_egitim_web.core\\tekno_egitim_web.core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ECEM YAMAN\\Desktop\\tekno_egitim_web\\tekno_egitim_web.core\\tekno_egitim_web.core.csproj",
+        "projectUniqueName": "C:\\Users\\BEYZA DURNA\\Desktop\\SİTE ESKİ\\tekno_egitim_web\\tekno_egitim_web.core\\tekno_egitim_web.core.csproj",
         "projectName": "tekno_egitim_web.core",
-        "projectPath": "C:\\Users\\ECEM YAMAN\\Desktop\\tekno_egitim_web\\tekno_egitim_web.core\\tekno_egitim_web.core.csproj",
-        "packagesPath": "C:\\Users\\ECEM YAMAN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ECEM YAMAN\\Desktop\\tekno_egitim_web\\tekno_egitim_web.core\\obj\\",
+        "projectPath": "C:\\Users\\BEYZA DURNA\\Desktop\\SİTE ESKİ\\tekno_egitim_web\\tekno_egitim_web.core\\tekno_egitim_web.core.csproj",
+        "packagesPath": "C:\\Users\\BEYZA DURNA\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\BEYZA DURNA\\Desktop\\SİTE ESKİ\\tekno_egitim_web\\tekno_egitim_web.core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\ECEM YAMAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\BEYZA DURNA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -43,7 +46,7 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.4, )"
+              "version": "[3.1.5, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer.Design": {
               "target": "Package",

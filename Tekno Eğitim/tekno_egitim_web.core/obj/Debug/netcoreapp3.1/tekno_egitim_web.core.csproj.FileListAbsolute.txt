@@ -6,3 +6,29 @@ C:\Users\ECEM YAMAN\Desktop\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\net
 C:\Users\ECEM YAMAN\Desktop\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.AssemblyInfo.cs
 C:\Users\ECEM YAMAN\Desktop\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.dll
 C:\Users\ECEM YAMAN\Desktop\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.pdb
+C:\Users\BEYZA DURNA\Desktop\tekno_egitim_web\tekno_egitim_web.core\bin\Debug\netcoreapp3.1\tekno_egitim_web.core.deps.json
+C:\Users\BEYZA DURNA\Desktop\tekno_egitim_web\tekno_egitim_web.core\bin\Debug\netcoreapp3.1\tekno_egitim_web.core.dll
+C:\Users\BEYZA DURNA\Desktop\tekno_egitim_web\tekno_egitim_web.core\bin\Debug\netcoreapp3.1\tekno_egitim_web.core.pdb
+C:\Users\BEYZA DURNA\Desktop\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.csprojAssemblyReference.cache
+C:\Users\BEYZA DURNA\Desktop\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.csproj.CoreCompileInputs.cache
+C:\Users\BEYZA DURNA\Desktop\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.AssemblyInfoInputs.cache
+C:\Users\BEYZA DURNA\Desktop\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.AssemblyInfo.cs
+C:\Users\BEYZA DURNA\Desktop\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.dll
+C:\Users\BEYZA DURNA\Desktop\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.pdb
+C:\Users\ECEM YAMAN\Desktop\SİTE ESKİ\tekno_egitim_web\tekno_egitim_web.core\bin\Debug\netcoreapp3.1\tekno_egitim_web.core.deps.json
+C:\Users\ECEM YAMAN\Desktop\SİTE ESKİ\tekno_egitim_web\tekno_egitim_web.core\bin\Debug\netcoreapp3.1\tekno_egitim_web.core.dll
+C:\Users\ECEM YAMAN\Desktop\SİTE ESKİ\tekno_egitim_web\tekno_egitim_web.core\bin\Debug\netcoreapp3.1\tekno_egitim_web.core.pdb
+C:\Users\ECEM YAMAN\Desktop\SİTE ESKİ\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.csprojAssemblyReference.cache
+C:\Users\ECEM YAMAN\Desktop\SİTE ESKİ\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.AssemblyInfoInputs.cache
+C:\Users\ECEM YAMAN\Desktop\SİTE ESKİ\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.AssemblyInfo.cs
+C:\Users\ECEM YAMAN\Desktop\SİTE ESKİ\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.dll
+C:\Users\ECEM YAMAN\Desktop\SİTE ESKİ\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.pdb
+C:\Users\BEYZA DURNA\Desktop\SİTE ESKİ\tekno_egitim_web\tekno_egitim_web.core\bin\Debug\netcoreapp3.1\tekno_egitim_web.core.deps.json
+C:\Users\BEYZA DURNA\Desktop\SİTE ESKİ\tekno_egitim_web\tekno_egitim_web.core\bin\Debug\netcoreapp3.1\tekno_egitim_web.core.dll
+C:\Users\BEYZA DURNA\Desktop\SİTE ESKİ\tekno_egitim_web\tekno_egitim_web.core\bin\Debug\netcoreapp3.1\tekno_egitim_web.core.pdb
+C:\Users\BEYZA DURNA\Desktop\SİTE ESKİ\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.csprojAssemblyReference.cache
+C:\Users\BEYZA DURNA\Desktop\SİTE ESKİ\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.csproj.CoreCompileInputs.cache
+C:\Users\BEYZA DURNA\Desktop\SİTE ESKİ\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.AssemblyInfoInputs.cache
+C:\Users\BEYZA DURNA\Desktop\SİTE ESKİ\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.AssemblyInfo.cs
+C:\Users\BEYZA DURNA\Desktop\SİTE ESKİ\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.dll
+C:\Users\BEYZA DURNA\Desktop\SİTE ESKİ\tekno_egitim_web\tekno_egitim_web.core\obj\Debug\netcoreapp3.1\tekno_egitim_web.core.pdb

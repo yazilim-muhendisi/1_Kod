@@ -14,6 +14,8 @@ namespace tekno_egitim_web.core.Services
         Task<Kategoriler> GetWithVideoByIdAsycn(int kategori_id);
         Task<Kategoriler> GetWithNotByIdAsycn(int kategori_id);
 
+        Task KategoriKaydet(Kategoriler data);
+
         //Kategoriye özgü metotlar tanımlanır.
         //TagHelper
         //Hesaplama

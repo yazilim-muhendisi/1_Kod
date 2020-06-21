@@ -9,5 +9,6 @@ namespace tekno_egitim_web.core.Services
     public interface IHaberServices : IService<Haber>
     {
         Task<Haber> GetWithKategoriByIdAsync(int haber_id);
+        Task HaberKaydet(Haber data);
     }
 }

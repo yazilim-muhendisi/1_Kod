@@ -13,6 +13,7 @@ namespace tekno_egitim_web.core.Model
         public string imageUrl { get; set; }
         public int kategori_id { get; set; }
         public bool haber_silme { get; set; }
+        public int haber_görüntüleme { get; set; }
         public virtual Kategoriler Kategoriler { get; set; }
     }
 }

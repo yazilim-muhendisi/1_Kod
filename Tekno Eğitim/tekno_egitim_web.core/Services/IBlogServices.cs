@@ -10,5 +10,10 @@ namespace tekno_egitim_web.core.Services
     {
         Task<Blog> GetWithKategoriByIdAsync(int blog_id);
         //veritabanı hariç yapacağımız kodlar
+        Task BlogKaydet(Blog data);
+
+        //Kategoriye özgü metotlar tanımlanır.
+        //TagHelper
+        //Hesaplama
     }
 }

@@ -14,6 +14,7 @@ namespace tekno_egitim_web.core.UnitOfWorks
         INot Nots { get; }
         IVideo Videos { get; }
         IKategoriler Kategoris { get;  }
+        IUniversite Universiteler { get;  }
         Task CommitAsycn();
         void Commit();
     }
