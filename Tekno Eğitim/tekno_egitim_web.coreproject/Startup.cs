@@ -33,7 +33,7 @@ namespace tekno_egitim_web.coreproject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<DbContext, ApplicationDbContext>();
+           
             services.AddScoped<NotFoundFilter>();
             services.AddAutoMapper(typeof(Startup));
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
@@ -44,13 +44,15 @@ namespace tekno_egitim_web.coreproject
             services.AddScoped<IMakaleServices, MakaleService>();
             services.AddScoped<INotServices, NotService>();
             services.AddScoped<IVideoServices, VideoService>();
+            services.AddScoped<IUniversiteServices, UniversiteService>();
 
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-            services.AddDbContext<ApplicationDbContext>(options =>
+            services.AddDbContext<SiteDbContext>(options =>
             {
-                options.UseSqlServer("Data Source=DESKTOP-JITEBE9;Initial Catalog=ApplicationDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+                options.UseSqlServer("Data Source=DESKTOP-VHE9Q4J\\SQLEXPRESS;Initial Catalog=SiteDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             });
+            services.AddScoped<DbContext, SiteDbContext>();
             services.AddControllersWithViews();
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
