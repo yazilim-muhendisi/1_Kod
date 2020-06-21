@@ -10,7 +10,7 @@ namespace tekno_egitim_web.data.Repository
 {
     public class BlogRepository : Repository<Blog>, IBlog
     {
-        private ApplicationDbContext applicationdbcontext { get => _context as ApplicationDbContext; }
+        private SiteDbContext applicationdbcontext { get => _context as SiteDbContext; }
         public BlogRepository(DbContext context) : base(context)
         {
         }

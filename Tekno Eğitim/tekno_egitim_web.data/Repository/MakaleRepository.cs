@@ -10,7 +10,7 @@ namespace tekno_egitim_web.data.Repository
 {
     public class MakaleRepository : Repository<Makale>, IMakale
     {
-        private ApplicationDbContext applicationdbcontext { get => _context as ApplicationDbContext; }
+        private SiteDbContext applicationdbcontext { get => _context as SiteDbContext; }
         public MakaleRepository(DbContext context) : base(context)
         {
         }

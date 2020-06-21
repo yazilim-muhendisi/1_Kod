@@ -10,7 +10,7 @@ namespace tekno_egitim_web.data.Repository
 {
     public class NotRepository : Repository<Not>, INot
     {
-        private ApplicationDbContext applicationdbcontext { get => _context as ApplicationDbContext; }
+        private SiteDbContext applicationdbcontext { get => _context as SiteDbContext; }
         public NotRepository(DbContext context) : base(context)
         {
         }

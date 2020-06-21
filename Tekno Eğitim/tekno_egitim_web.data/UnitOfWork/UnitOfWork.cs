@@ -10,13 +10,14 @@ namespace tekno_egitim_web.data.UnitOfWork
 {
     public  class UnitOfWork : IUnitOfWork
     {
-        private readonly ApplicationDbContext _context;
+        private readonly SiteDbContext _context;
         private BlogRepository _blogRepository;
         private HaberRepository _haberRepository;
         private MakaleRepository _makaleRepository;
         private VideoRepository _videoRepository;
         private NotRepository _notRepository;
         private KategoriRepository _kategoriRepository;
+        private UniversiteRepository _universiteRepository;
 
         public IBlog Blogs => _blogRepository = _blogRepository ?? new BlogRepository(_context);
 
@@ -29,8 +30,9 @@ namespace tekno_egitim_web.data.UnitOfWork
         public IVideo Videos => _videoRepository = _videoRepository ?? new VideoRepository(_context);
 
         public IKategoriler Kategoris => _kategoriRepository = _kategoriRepository ?? new KategoriRepository(_context);
+        public IUniversite Universiteler =>  _universiteRepository ?? new UniversiteRepository(_context);
 
-        public UnitOfWork(ApplicationDbContext applicationDbContext)
+        public UnitOfWork(SiteDbContext applicationDbContext)
         {
             _context = applicationDbContext;
         }

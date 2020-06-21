@@ -10,7 +10,7 @@ namespace tekno_egitim_web.data.Repository
 {
     public class HaberRepository : Repository<Haber>, IHaber
     {
-        private ApplicationDbContext applicationdbcontext { get => _context as ApplicationDbContext; }
+        private SiteDbContext applicationdbcontext { get => _context as SiteDbContext; }
         public HaberRepository(DbContext context) : base(context)
         {
         }
