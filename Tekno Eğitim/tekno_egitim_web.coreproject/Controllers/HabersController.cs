@@ -6,15 +6,17 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using tekno_egitim_web.core.Model;
+using tekno_egitim_web.core.Services;
 using tekno_egitim_web.data;
 
 namespace tekno_egitim_web.coreproject.Controllers
 {
     public class HabersController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly SiteDbContext _context;
+        private readonly IHaberServices _services;
 
-        public HabersController(ApplicationDbContext context)
+        public HabersController(SiteDbContext context)
         {
             _context = context;
         }
@@ -32,9 +34,11 @@ namespace tekno_egitim_web.coreproject.Controllers
             {
                 return NotFound();
             }
-
             var haber = await _context.Habers
-                .FirstOrDefaultAsync(m => m.haber_id == id);
+            .FirstOrDefaultAsync(m => m.haber_id == id);
+            haber.haber_görüntüleme+= 1;
+            _context.SaveChanges();
+
             if (haber == null)
             {
                 return NotFound();
@@ -58,8 +62,9 @@ namespace tekno_egitim_web.coreproject.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(haber);
-                await _context.SaveChangesAsync();
+                await _services.HaberKaydet(haber);
+                //_context.Add(haber);
+                //await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(haber);

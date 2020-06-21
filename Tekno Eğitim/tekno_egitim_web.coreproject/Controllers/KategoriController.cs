@@ -6,17 +6,20 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using tekno_egitim_web.core.Model;
+using tekno_egitim_web.core.Services;
 using tekno_egitim_web.data;
 
 namespace tekno_egitim_web.coreproject.Controllers
 {
     public class KategoriController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly SiteDbContext _context;
+        private readonly IKategoriServices _services;
 
-        public KategoriController(ApplicationDbContext context)
+        public KategoriController(SiteDbContext context, IKategoriServices services)
         {
             _context = context;
+            _services = services;
         }
 
         // GET: Kategori
@@ -58,8 +61,14 @@ namespace tekno_egitim_web.coreproject.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(kategoriler);
-                await _context.SaveChangesAsync();
+                //birinci yöntem
+
+                await _services.KategoriKaydet(kategoriler);
+
+                //ikinci yöntem
+
+                //_context.Add(kategoriler);
+                //await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(kategoriler);

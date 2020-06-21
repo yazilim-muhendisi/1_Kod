@@ -5,18 +5,22 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using SQLitePCL;
 using tekno_egitim_web.core.Model;
+using tekno_egitim_web.core.Services;
 using tekno_egitim_web.data;
 
 namespace tekno_egitim_web.coreproject.Controllers
 {
     public class VideosController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly SiteDbContext _context;
+        private readonly IVideoServices _services;
 
-        public VideosController(ApplicationDbContext context)
+        public VideosController(SiteDbContext context, IVideoServices services)
         {
             _context = context;
+            _services = services;
         }
 
         // GET: Videos
@@ -35,6 +39,8 @@ namespace tekno_egitim_web.coreproject.Controllers
 
             var video = await _context.Videos
                 .FirstOrDefaultAsync(m => m.video_id == id);
+            video.izlenme_sayisi += 1;
+            _context.SaveChanges();
             if (video == null)
             {
                 return NotFound();
@@ -42,7 +48,16 @@ namespace tekno_egitim_web.coreproject.Controllers
 
             return View(video);
         }
+        public async Task<IActionResult> Top()
+        {
 
+            var videoList = await _context.Videos.ToListAsync();
+
+            videoList = videoList.OrderByDescending(a => a.izlenme_sayisi).ToList();
+                        
+
+            return View(videoList);
+        }
         // GET: Videos/Create
         public IActionResult Create()
         {
@@ -58,8 +73,9 @@ namespace tekno_egitim_web.coreproject.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(video);
-                await _context.SaveChangesAsync();
+                await _services.VideoKaydet(video);
+                //_context.Add(video);
+                //await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(video);

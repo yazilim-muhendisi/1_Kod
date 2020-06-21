@@ -6,15 +6,17 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using tekno_egitim_web.core.Model;
+using tekno_egitim_web.core.Services;
 using tekno_egitim_web.data;
 
 namespace tekno_egitim_web.coreproject.Controllers
 {
     public class NotsController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly SiteDbContext _context;
+        private readonly INotServices _services;
 
-        public NotsController(ApplicationDbContext context)
+        public NotsController(SiteDbContext context)
         {
             _context = context;
         }
@@ -58,8 +60,9 @@ namespace tekno_egitim_web.coreproject.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(not);
-                await _context.SaveChangesAsync();
+                await _services.NotKaydet(not);
+                //_context.Add(not);
+                //await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(not);

@@ -6,17 +6,20 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using tekno_egitim_web.core.Model;
+using tekno_egitim_web.core.Services;
 using tekno_egitim_web.core.Repository;
 using tekno_egitim_web.data;
+using tekno_egitim_web.services.Services;
 
 namespace tekno_egitim_web.coreproject.Controllers
 {
     public class BlogsController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly SiteDbContext _context;
+        private readonly IBlogServices _services;
         private IRepository<Blog> @object;
 
-        public BlogsController(ApplicationDbContext context)
+        public BlogsController(SiteDbContext context)
         {
             _context = context;
         }
@@ -62,8 +65,9 @@ namespace tekno_egitim_web.coreproject.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(blog);
-                await _context.SaveChangesAsync();
+                await _services.BlogKaydet(blog);
+                //_context.Add(blog);
+                //await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(blog);
